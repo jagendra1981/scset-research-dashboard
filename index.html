@@ -10,11 +10,11 @@
     *{box-sizing:border-box} body{margin:0;background:linear-gradient(135deg,#eef5fb,#f8fbfe);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}
     .shell{max-width:1100px;margin:auto;padding:34px 22px 44px}.eyebrow{margin:0 0 7px;color:var(--blue);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
     h1{margin:0;font-size:clamp(1.7rem,4vw,2.8rem);line-height:1.12}.sub{margin:10px 0 26px;color:var(--muted);font-size:1rem}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}.stat,.chart-card,.infra{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 28px rgba(16,42,67,.06)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}.stat,.chart-card,.infra{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:[...]
     .stat{padding:18px}.stat b{display:block;font-size:1.65rem;color:var(--blue);margin-bottom:5px}.stat span{font-size:.88rem;color:var(--muted)}
-    .chart-card{padding:20px}.controls{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}.controls button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:9px 14px;cursor:pointer;font:inherit;font-weight:600}.controls button:hover{background:#eef5fb}.controls button.active{background:var(--ink);border-color:var(--ink);color:#fff}
-    .chart-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.chart-head h2{font-size:1.18rem;margin:0}.unit{color:var(--muted);font-size:.86rem}svg{width:100%;height:auto;overflow:visible}.grid{stroke:var(--line);stroke-width:1}.axis{fill:var(--muted);font-size:13px}.bar{transition:y .6s ease,height .6s ease;filter:drop-shadow(0 4px 5px rgba(16,42,67,.1))}.value{fill:var(--ink);font-weight:700;text-anchor:middle;font-size:14px}
-    .infra{margin-top:18px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start}.badge{background:#e7f1fa;color:var(--blue);border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:700;white-space:nowrap}.infra p{margin:2px 0;color:var(--muted);line-height:1.5}.foot{margin-top:18px;text-align:center;color:var(--muted);font-size:.78rem}
+    .chart-card{padding:20px}.controls{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}.controls button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;pad[...]
+    .chart-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.chart-head h2{font-size:1.18rem;margin:0}.unit{color:var(--muted);font-size:.86rem}svg{width:100%;height:aut[...]
+    .infra{margin-top:18px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start}.badge{background:#e7f1fa;color:var(--blue);border-radius:999px;padding:6px 10px;font-size:.78rem;font-wei[...]
     @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.chart-head{align-items:flex-start;flex-direction:column}.infra{flex-direction:column}}
     @media(max-width:430px){.stats{grid-template-columns:1fr}.shell{padding:24px 14px}.chart-card{padding:15px}.controls button{flex:1 1 45%}}
   </style>
@@ -32,26 +32,26 @@
   </section>
   <section class="chart-card">
     <nav class="controls" aria-label="Select research metric">
-      <button class="active" data-key="publications">Publications</button><button data-key="external">External funding</button><button data-key="seed">Seed grants</button><button data-key="top2">Top 2% faculty</button>
+      <button class="active" data-key="publications">Publications</button><button data-key="external">External funding</button><button data-key="seed">Seed grants</button><button data-key="top2">T[...]
     </nav>
     <div class="chart-head"><h2 id="chartTitle">Year-wise Scopus-indexed publications</h2><span class="unit" id="unit">Publications</span></div>
     <svg id="chart" viewBox="0 0 760 350" role="img" aria-labelledby="chartTitle"></svg>
   </section>
-  <section class="infra"><span class="badge">AI INFRASTRUCTURE</span><p><strong>NVIDIA DGX H200</strong> supports large-scale AI, deep learning, foundation-model, multimodal and generative-AI research by SCSET faculty and students.</p></section>
+  <section class="infra"><span class="badge">AI INFRASTRUCTURE</span><p><strong>NVIDIA DGX H200</strong> supports large-scale AI, deep learning, foundation-model, multimodal and generative-AI rese[...]
   <p class="foot">SCSET, Bennett University · Data compiled from the School research-achievement presentation</p>
 </main>
 <script>
 const sets={
- publications:{title:'Year-wise Scopus-indexed publications',unit:'Publications',labels:['2022','2023','2024','AY 2025–26'],values:[236,354,790,1596],color:'#1463a5',fmt:v=>v.toLocaleString('en-IN')},
+ publications:{title:'Year-wise Scopus-indexed publications',unit:'Publications',labels:['2022','2023','2024','AY 2025–26'],values:[236,354,790,1596],color:'#1463a5',fmt:v=>v.toLocaleString('en-[...]
  external:{title:'Year-wise external research funding',unit:'₹ lakh',labels:['AY 2024–25','AY 2025–26'],values:[45.72,70.7],color:'#ef7d32',fmt:v=>'₹'+v.toFixed(2)+' L'},
  seed:{title:'Bennett University seed-grant support',unit:'₹ lakh',labels:['AY 2024–25','AY 2025–26'],values:[30.68,31],color:'#54a36f',fmt:v=>'₹'+v.toFixed(2)+' L'},
- top2:{title:'SCSET faculty among the World’s Top 2% Scientists',unit:'Faculty count',labels:['2024','2025'],values:[8,10],color:'#8064a2',fmt:v=>String(v)}
+ top2:{title:'SCSET faculty among the World's Top 2% Scientists',unit:'Faculty count',labels:['2024','2025'],values:[8,10],color:'#8064a2',fmt:v=>String(v)}
 };
 const svg=document.getElementById('chart'),title=document.getElementById('chartTitle'),unit=document.getElementById('unit');
-function draw(key){const d=sets[key],W=760,H=350,L=68,R=22,T=45,B=58,IW=W-L-R,IH=H-T-B,max=Math.max(...d.values)*1.2,step=IW/d.values.length,bw=Math.min(116,step*.55);title.textContent=d.title;unit.textContent=d.unit;let m='';
- for(let i=0;i<=4;i++){const y=T+IH*i/4,t=max*(1-i/4);m+=`<line class="grid" x1="${L}" y1="${y}" x2="${W-R}" y2="${y}"/><text class="axis" x="${L-10}" y="${y+5}" text-anchor="end">${t>=100?Math.round(t).toLocaleString('en-IN'):t.toFixed(t<20?1:0)}</text>`}
- d.values.forEach((v,i)=>{const x=L+step*i+(step-bw)/2,h=IH*v/max,y=T+IH-h;m+=`<rect class="bar" fill="${d.color}" x="${x}" y="${T+IH}" width="${bw}" height="0" rx="7"><title>${d.labels[i]}: ${d.fmt(v)}</title></rect><text class="value" x="${x+bw/2}" y="${Math.max(T+17,y-10)}">${d.fmt(v)}</text><text class="axis" x="${x+bw/2}" y="${H-22}" text-anchor="middle">${d.labels[i]}</text>`});svg.innerHTML=m;requestAnimationFrame(()=>svg.querySelectorAll('.bar').forEach((b,i)=>{const h=IH*d.values[i]/max;b.setAttribute('y',T+IH-h);b.setAttribute('height',h)}))}
-document.querySelectorAll('[data-key]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-key]').forEach(x=>x.classList.toggle('active',x===b));draw(b.dataset.key)}));draw('publications');
+function draw(key){const d=sets[key],W=760,H=350,L=68,R=22,T=45,B=58,IW=W-L-R,IH=H-T-B,max=Math.max(...d.values)*1.2,step=IW/d.values.length,bw=Math.min(116,step*.55);title.textContent=d.title;uni[...]
+ for(let i=0;i<=4;i++){const y=T+IH*i/4,t=max*(1-i/4);m+=`<line class="grid" x1="${L}" y1="${y}" x2="${W-R}" y2="${y}"/><text class="axis" x="${L-10}" y="${y+5}" text-anchor="end">${t>=100?Math.ro[...]
+ d.values.forEach((v,i)=>{const x=L+step*i+(step-bw)/2,h=IH*v/max,y=T+IH-h;m+=`<rect class="bar" fill="${d.color}" x="${x}" y="${T+IH}" width="${bw}" height="0" rx="7"><title>${d.labels[i]}: ${d.f[...]
+document.querySelectorAll('[data-key]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-key]').forEach(x=>x.classList.toggle('active',x===b));draw(b.dataset.key)}));dra[...]
 </script>
 </body>
 </html>
